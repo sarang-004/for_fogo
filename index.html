@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6efe4">
+  <meta name="description" content="Some kuboos, some butter naans and a lot of bagels!">
+
+  <title>My Fogo ♡</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Special+Elite&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css?v=2">
+</head>
+
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="topbar">
+    <a class="wordmark" href="#/" aria-label="Home">
+      <span>✳</span> My Fogo
+    </a>
+
+    <!--button class="music-toggle" id="musicToggle" type="button" aria-pressed="false">
+      <span>♫</span>
+      <span id="musicLabel">A little soundtrack</span>
+    </button-->
+  </header>
+
+  <main>
+
+    <!-- HOMEPAGE -->
+    <section class="hero home-view" id="homeView">
+
+      <div class="hero-copy">
+        <p class="eyebrow">✳ &nbsp; Some kuboos, some butter naans and a lot of bagels!</p>
+
+        <h1>
+          A little corner of the internet<br>
+          <em>for the people I keep close.</em>
+        </h1>
+
+        <p class="intro">
+          For the people, the tiny moments, the terrible jokes,
+          and the memories that somehow became home.
+        </p>
+
+        <div class="search-wrap">
+          <label for="friendSearch">I have a message for you</label>
+
+          <div class="search-box">
+            <span>⌕</span>
+
+            <input
+              id="friendSearch"
+              type="search"
+              placeholder="Type your name..."
+              autocomplete="off"
+            >
+
+            <button id="searchButton" aria-label="Search names" type="button">
+              ↗
+            </button>
+          </div>
+
+          <p class="search-hint" id="searchHint">
+            Hope you like it!
+          </p>
+
+          <div class="search-results" id="searchResults" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <!-- Decorative scrapbook -->
+      <div class="memory-wall" aria-label="Scrapbook decorations">
+        <div class="wall-note">the good old days ♡</div>
+
+        <div class="polaroid polaroid-one">
+          <div class="photo-placeholder sunset">
+            <span>little<br>moments</span>
+          </div>
+          <p>the ones that stay</p>
+        </div>
+
+        <div class="polaroid polaroid-two">
+          <div class="photo-placeholder flower">
+            <span>✿</span>
+          </div>
+          <p>ordinary magic</p>
+        </div>
+
+        <div class="snapshot snapshot-one">
+          somewhere<br>in the middle<br>of everything <span>✳</span>
+        </div>
+
+        <div class="snapshot snapshot-two">
+          remember<br>when? <span>↗</span>
+        </div>
+
+        <span class="sparkle sparkle-one">✦</span>
+        <span class="sparkle sparkle-two">✳</span>
+      </div>
+    </section>
+
+    <!-- HOMEPAGE MEMORY WALL -->
+    <section class="home-lower home-view">
+      <div class="lower-heading">
+        <p class="eyebrow">A WALL OF LITTLE THINGS</p>
+        <h2>Some people just <em>stick.</em></h2>
+      </div>
+
+      <div class="memory-gallery" id="memoryGallery">
+        <div class="memory-gallery-track" id="memoryGalleryTrack">
+
+          <div class="memory-polaroid">
+            <img src="images/gallery/p1.jpeg" alt="A favourite memory">
+            <p>Where it all started!</p>
+          </div>
+
+          <div class="memory-polaroid">
+            <img src="images/gallery/p2.jpeg" alt="A day out">
+            <p>Ofc Madhu is in Chennai!!</p>
+          </div>
+
+          <div class="memory-polaroid">
+            <img src="images/gallery/p3.jpeg" alt="A peaceful moment">
+            <p>Decorum 100 (rare)</p>
+          </div>
+
+          <div class="memory-polaroid">
+            <img src="images/gallery/p4.jpeg" alt="A favourite photo">
+            <p>Oneesha is officially funny</p>
+          </div>
+
+          <div class="memory-polaroid">
+            <img src="images/gallery/p5.jpeg" alt="A little mood">
+            <p>Rs. 1800 debited</p>
+          </div>
+
+          <div class="memory-polaroid">
+            <img src="images/gallery/p6.jpeg" alt="A memory with a friend">
+            <p>Saying our good byes</p>
+          </div>
+
+          <div class="memory-polaroid">
+            <img src="images/gallery/p7.jpeg" alt="Another favourite memory">
+            <p>Fire in Foodys</p>
+          </div>
+
+          <div class="memory-polaroid">
+            <img src="images/gallery/p8.jpeg" alt="thats it?!">
+            <p>Convincing Skanboi to skip class</p>
+          </div>
+
+          <div class="memory-polaroid">
+            <img src="images/gallery/p9.jpeg" alt="thats it?!">
+            <p>Only Mininons photo ever</p>
+          </div>
+
+        </div>
+      </div>
+
+      <p class="wall-footnote">
+        Your name might be hiding in here. Go on, have a look.
+        <span>♡</span>
+      </p>
+    </section>
+
+    <!-- PERSONAL FRIEND PAGE -->
+    <section class="personal-view hidden" id="personalView">
+
+      <button class="back-home" id="backHome" type="button">
+        ← back to the little corner
+      </button>
+
+      <!-- Personal greeting -->
+      <div class="personal-header">
+        <p class="eyebrow">A NOTE JUST FOR YOU</p>
+
+        <h1 id="friendGreeting">
+          Hey, friend! <span>♡</span>
+        </h1>
+
+        <p class="personal-intro" id="friendIntro">
+          This little corner is yours.
+        </p>
+      </div>
+
+      <!-- Personal photos -->
+      <div class="personal-scrapbook" id="personalScrapbook"></div>
+
+      <!-- Letter invitation -->
+      <div class="letter-invitation">
+        <span class="invitation-doodle">✳</span>
+
+        <p>There’s something I wanted you to have.</p>
+
+        <button class="reveal-button" id="revealLetter" type="button">
+          There's something for you <span>♡</span>
+        </button>
+
+        <p class="small-note">No rush. Open it when you're ready.</p>
+      </div>
+
+      <!-- Letter and envelope -->
+      <div class="letter-stage hidden" id="letterStage">
+
+        <div class="letter-stage-top">
+          <span class="eyebrow">SEALED WITH A LITTLE LOVE</span>
+
+          <button class="skip-animation" id="skipAnimation" type="button">
+            Skip the animation ↗
+          </button>
+        </div>
+
+        <button
+          class="envelope"
+          id="openEnvelope"
+          type="button"
+          aria-label="Open the envelope"
+        >
+          <span class="envelope-flap"></span>
+          <span class="envelope-heart">♡</span>
+          <span class="envelope-label">for you, always</span>
+        </button>
+
+        <p class="envelope-caption" id="envelopeCaption">
+          Tap the envelope to open your letter.
+        </p>
+
+        <!-- Actual letter -->
+        <article class="letter-paper hidden" id="letterPaper">
+
+          <div class="letter-paper-inner">
+            <p class="letter-date" id="letterDate">
+              a little note, just because
+            </p>
+
+            <h2 id="letterTitle">Dear you,</h2>
+
+            <div class="letter-body" id="letterBody"></div>
+
+            <p class="letter-signoff" id="letterSignoff">
+              With love, always ♡
+            </p>
+
+            <div class="letter-stamp" aria-hidden="true">♡</div>
+          </div>
+
+        </article>
+        <!-- Personal cassette player -->
+<section class="cassette-section hidden" id="cassetteSection">
+  <p class="eyebrow">A SONG, JUST FOR YOU</p>
+  <h2>A little piece of us ♡</h2>
+  <p class="cassette-description" id="cassetteDescription">
+    Some songs will always remind me of certain people.
+  </p>
+
+  <div class="cassette-player">
+    <div class="cassette">
+      <div class="cassette-label">
+        <span class="cassette-label-small">A MIXTAPE FOR</span>
+        <h3 id="cassetteFriend">YOU ♡</h3>
+        <p id="cassetteSongTitle">Your chosen song</p>
+        <p id="cassetteArtist">Artist name</p>
+      </div>
+
+      <div class="cassette-window">
+        <div class="cassette-reel" id="reelLeft">
+          <div class="reel-inner"></div>
+        </div>
+
+        <div class="cassette-tape-line"></div>
+
+        <div class="cassette-reel" id="reelRight">
+          <div class="reel-inner"></div>
+        </div>
+      </div>
+
+      <div class="cassette-screws">
+        <span>●</span><span>●</span><span>●</span>
+        <span>●</span><span>●</span><span>●</span>
+      </div>
+
+      <div class="cassette-bottom">
+        <span>SIDE A</span>
+        <span>MADE WITH ♡</span>
+      </div>
+    </div>
+
+    <div class="cassette-controls">
+      <button type="button" id="cassettePlay">
+        ▶ Play
+      </button>
+
+      <div class="cassette-progress">
+        <span id="cassetteCurrentTime">0:00</span>
+        <input
+          type="range"
+          id="cassetteSeek"
+          min="0"
+          max="100"
+          value="0"
+          aria-label="Seek through song"
+        >
+        <span id="cassetteDuration">0:00</span>
+      </div>
+
+      <p class="cassette-now-playing" id="cassetteStatus">
+        A little song, picked especially for you. ♡
+      </p>
+    </div>
+  </div>
+</section>
+
+<audio id="personalSong" preload="metadata"></audio>
+      </div>
+
+      <!-- Personal footer -->
+      <footer class="personal-footer">
+        Made of memories, held together with tape and a little bit of love.
+        <span>♡</span>
+      </footer>
+
+    </section>
+  </main>
+
+  <!-- Homepage footer -->
+  <footer class="site-footer home-view">
+    <span>made with a little too much sentiment</span>
+    <span>✳</span>
+    <span>built different</span>
+  </footer>
+
+  <!-- Homepage soundtrack -->
+  <audio id="backgroundMusic" loop preload="none">
+    <source src="audio/background.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Website data and functionality -->
+  <script src="friends.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
