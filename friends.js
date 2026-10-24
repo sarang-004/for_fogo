@@ -460,5 +460,41 @@ window.FRIENDS = [
       artist: "Thaman S",
       src: "audio/yoshita.mp3"
     }
+  },
+
+  {
+    slug: "kuboos",
+    name: "Kuboos",
+    aliases: [
+      "Aarnaa",
+      "Yatin",
+      "Sauhard",
+      "Rameshwar",
+      "Sanjith",
+      "Neeharika",
+      "Akhil",
+      "Navika",
+      "Vaishaakh",
+      "Jyotsnaa"
+    ],
+    showCassette: true,
+    greeting: "Hey, Kuboos! ♡",
+    intro: "A little corner just for you.",
+    photos: [
+      { caption: "Error 404" },
+      { caption: "Maybe we should take more pics?" }
+    ],
+    letterTitle: "Dear Kuboos,",
+    letter: `I haven't really had the opportunity to form a lot of memories with all of you, and I am sorry
+    for that! Y'all are really cool people and I mean it. It reminds me of my own batch! All I have to say is that
+    have as much fun as possible, as soon as possible. A lot of the things you think you can do later may not be easy
+    as time passes. So say no to nothing if yes is an option! And hopefully we can make more meaningful memories within
+    the few months I have left in this campus.`,
+    signoff: "With love,\nSarang ♡",
+    song: {
+      title: "I Hope you like it",
+      artist: "Thank me later",
+      src: "audio/kuboos.mp3"
+    }
   }
 ];

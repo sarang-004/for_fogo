@@ -12,6 +12,8 @@ Example personal link after deployment:
 
 The `slug` is the final part (`aryan`). Keep it lowercase and URL-friendly. The name search and personal links both use this data file.
 
+To let additional names open the same personal note, add them to that friend's `aliases` array. For example, searching any of the aliases on the Kuboos entry opens the Kuboos note.
+
 ## 2. Add photos
 
 Put photos in the `images/` folder, then reference them in `friends.js`, for example:

@@ -67,7 +67,9 @@
     const q = $('friendSearch').value.trim().toLowerCase();
     const results = $('searchResults');
     if (!q) { results.innerHTML = ''; $('searchHint').textContent = 'Or open the personal link I sent you ♡'; return; }
-    const matches = friends.filter(f => f.name.toLowerCase().includes(q) || f.slug.toLowerCase().includes(q));
+    const matches = friends.filter(f =>
+      [f.name, f.slug, ...(f.aliases || [])].some(name => name.toLowerCase().includes(q))
+    );
     results.innerHTML = matches.length ? matches.map(f => `<button class="result-item" type="button" data-slug="${escapeHtml(f.slug)}"><span>${escapeHtml(f.name)}</span><span>open your corner ↗</span></button>`).join('') : '<p class="no-results">No name found just yet. Check the spelling and try again ♡</p>';
     $('searchHint').textContent = matches.length ? 'Is that you? Pick your name below.' : 'Try another spelling, or use the personal link I sent you.';
   }
@@ -91,7 +93,7 @@
     $("letterPaper").classList.add("letter-arrive");
 
     // Reveal the cassette underneath the letter.
-    if (activeFriend?.song?.src) {
+    if (activeFriend?.showCassette) {
       cassette.section.classList.remove("hidden");
     }
 
@@ -140,7 +142,9 @@ function loadCassette(friend) {
 
   cassette.section.classList.add("hidden");
   cassette.play.textContent = "▶ Play";
+  cassette.play.disabled = true;
   cassette.seek.value = 0;
+  cassette.seek.disabled = true;
   cassette.current.textContent = "0:00";
   cassette.duration.textContent = "0:00";
   cassette.status.textContent = "";
@@ -148,24 +152,27 @@ function loadCassette(friend) {
   cassette.leftReel.classList.remove("spinning");
   cassette.rightReel.classList.remove("spinning");
 
-  // Hide the cassette if no song is configured
-  if (!song?.src) return;
+  if (!song?.src && !friend?.showCassette) return;
 
   // Set song information
   $("cassetteFriend").textContent =
     `${friend.name.toUpperCase()} ♡`;
 
   $("cassetteSongTitle").textContent =
-    song.title || "A song for you";
+    song?.title || "A song for you";
 
   $("cassetteArtist").textContent =
-    song.artist || "";
+    song?.artist || "";
 
-  // Load the song
-  cassette.audio.src = song.src;
-  cassette.audio.load();
+  if (song?.src) {
+    cassette.audio.src = song.src;
+    cassette.audio.load();
+    cassette.play.disabled = false;
+    cassette.seek.disabled = false;
+  } else {
+    cassette.status.textContent = "A song will be added here soon. ♡";
+  }
 
-  // Show the cassette
   cassette.section.classList.remove("hidden");
 }
 
